@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Beasiswa</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Asset/boostrap/css/bootstrap.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Agung Setiadi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <br><br><br>
+    <div class="container">
+        <div class="card kartu">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="foto">
+                        <img src="Asset/img/me.jpg" alt="" width="200" height="auto">
+                    </div>
+                </div>
+                <div class="col-md-8 kertas-biodata">
+                    <div class="biodata">
+                        <table width="100%" border="0">
+                            <tbody>
+                                <tr>
+                                    <td valign="top">
+                                        <table border="0" width="100%" style="padding-left: 2px; padding-right: 13px;">
+                                            <tbody>
+                                                <tr>
+                                                    <br><br>
+                                                    <td width="25%" valign="top" class="textt">Nama</td>
+                                                    <td width="2%">:</td>
+                                                    <td style="font-weight:bold">Agung Setiadi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="textt">NIM</td>
+                                                    <td>:</td>
+                                                    <td>201501047</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="textt">Email</td>
+                                                    <td>:</td>
+                                                    <td>agungpiglet@gmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="textt">Phone</td>
+                                                    <td>:</td>
+                                                    <td>081393200431</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="textt">Alamat</td>
+                                                    <td>:</td>
+                                                    <td>Puri Indah Depan Blok M-N</td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="top" class="textt">Sekolah</td>
+                                                    <td valign="top">:</td>
+                                                    <td>STIKOM YOS SUDARSO PURWOKERTO</td>
+                                                </tr>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    
+    <div class="container">
+        <div class="card-group">
+            <div class="card"style="max-width: 200pt; height: 200pt; padding: 30pt;">
+             
+              <div class="card-body">
+                <p class="card-title" style="font-size: 15pt;"><b>Nilai Rata - Rata Ujian</b></p>
+                <div id="nilai1"></div>
+                <div id="nilai2"></div>
+                <div id="hasil"></div>
+                <p class="card-text">
+                    <script>
+                        var datanilai1 = document.getElementById("nilai1");
+                        var datanilai2 = document.getElementById("nilai2");
+                        var datahasil = document.getElementById("hasil");
+                        var nilai1 = 85;
+                        var nilai2 = 88;
+                        var hasilnya = (nilai1 + nilai2) / 2;
+                        datanilai1.innerHTML = "Nilai Ujian Tertulis: " + nilai1;
+                        datanilai2.innerHTML = "Nilai Ujian Praktek: " + nilai2;
+                        datahasil.innerHTML = "Rata Rata Nilai: " + hasilnya;
+                    </script>
+                </p></div>
+            </div>
+            <div class="card"style="max-width: 200pt; height: 200pt; padding: 30pt;">
+              
+              <div class="card-body">
+                <p class="card-title" style="font-size: 15pt;"><b>SKORE TOEFL</b></p>
+               <div id="skoretoefl"></div>
+                
+                <p class="card-text">
+                <p ><small class="text-muted">Nilai</small></p>
+                <div id="nilaitoefl"></div>
+                <script >
+                   var skoretoefl = prompt("Masukkan SKORE TOEFL Anda: ");
+                var nilaiakhir = 0
+                if (skoretoefl >= 500) {
+                    nilaiakhir = skoretoefl
+                    nilaitoefl.innerHTML = " 100<br><br>"
+                        + "SKORE: " + skoretoefl;
+                }
+                if (skoretoefl <= 499) {
+                    nilaiakhir = skoretoefl
+                    nilaitoefl.innerHTML = " 80<br><br>"
+                        + "SKORE: " + skoretoefl;
+                }
+                if (skoretoefl <= 449) {
+                    nilaiakhir = skoretoefl
+                    nilaitoefl.innerHTML = " 50<br><br>"
+                        + "SKORE: " + skoretoefl;
+                }
+                   
+                    
+                        </script>
+              </div>
+            </div> <div class="card"style="max-width: 200pt; height: 200pt; padding: 30pt;">
+              
+                <div class="card-body">
+                  <p class="card-title" style="font-size: 15pt;"><b>BEASISWA</b></p>
+                 <div id="nilai"></div>
+                  
+                  <p class="card-text">
+                  <p ><small class="text-muted">Nilai</small></p>
+                  <div id="nilaites"></div>
+                  <script >
+                      var nilai = prompt("NILAI TES ");
+                      var hasilakhir = 0
+                      if(nilai >=90){
+                        hasilakhir = nilai
+                       nilaites.innerHTML =nilai+"<br>LULUS";
+                        }
+                     
+                      else if(nilai <= 89){
+                       hasilakhir = nilai 
+                       nilaites.innerHTML = nilai+"<br>TIDAK LULUS" ;
+                      }
+                     
+                      
+                          </script>
+                </div>
+              </div>
+    </div>
+    <script src="Asset/boostrap/js/bootstrap.js"></script>
+    <script src="Asset/boostrap/js/jquery.js"></script>
+    <script src="Asset/boostrap/js/popper.js"></script>
+</body>
+</html>
